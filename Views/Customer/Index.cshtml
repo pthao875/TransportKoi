@@ -1,0 +1,33 @@
+﻿ @model List<Customer> 
+@{
+    Layout = "_Layout";
+}
+<h2>Customer List</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var customer in Model)
+        {
+            <tr>
+                <td>@customer.Id</td>
+                <td>@customer.Name</td>
+                <td>@customer.Phone</td>
+                <td>@customer.Email</td>
+                <td>
+                    <a href="/Customer/Details/@customer.Id">Details</a> |
+                    <a href="/Customer/Edit/@customer.Id">Edit</a> |
+                    <a href="/Customer/Delete/@customer.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/Customer/Create">Add New Customer</a>

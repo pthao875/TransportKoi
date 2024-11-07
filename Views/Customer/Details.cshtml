@@ -1,0 +1,12 @@
+﻿@model Customer
+@{
+    Layout = "_Layout";
+}
+
+<h2>Customer Details</h2>
+<p>
+    <strong>Name:</strong> @Model.Name <br>
+    <strong>Phone:</strong> @Model.Phone <br>
+    <strong>Email:</strong> @Model.Email
+</p>
+<a href="/Customer/Index">Back to List</a>

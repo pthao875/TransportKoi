@@ -1,0 +1,12 @@
+﻿@model Shipment
+@{
+    Layout = "_Layout";
+}
+<h2>Shipment Details</h2>
+<p>
+    <strong>Sender:</strong> @Model.SenderId <br>
+    <strong>Receiver:</strong> @Model.ReceiverId <br>
+    <strong>Address:</strong> @Model.Address <br>
+    <strong>Weight:</strong> @Model.Weight
+</p>
+<a href="/Shipment/Index">Back to List</a>

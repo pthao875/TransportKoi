@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1 class="display-4">Welcome to MyApp!</h1>
+    <p class="lead">This is a simple ASP.NET Core MVC application for managing customers and shipments.</p>
+    <hr class="my-4">
+    <p>Use the buttons below to start working with your data.</p>
+    <a class="btn btn-primary btn-lg" href="@Url.Action("Index", "Customer")" role="button">View Customers</a>
+    <a class="btn btn-secondary btn-lg" href="@Url.Action("Index", "Shipment")" role="button">View Shipments</a>
+</div>
+
+<!-- Thêm bảng tóm tắt các dữ liệu quan trọng -->
+<div class="row mt-4">
+    <div class="col-md-6">
+        <h2>Recent Customers</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-6">
+        <h2>Recent Shipments</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Sender</th>
+                    <th>Receiver</th>
+                    <th>Weight</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+</div>

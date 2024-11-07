@@ -1,0 +1,35 @@
+﻿@model List<Shipment>
+@{
+    Layout = "_Layout";
+}
+<h2>Shipment List</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Sender</th>
+            <th>Receiver</th>
+            <th>Address</th>
+            <th>Weight</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var shipment in Model)
+        {
+            <tr>
+                <td>@shipment.Id</td>
+                <td>@shipment.SenderId</td>
+                <td>@shipment.ReceiverId</td>
+                <td>@shipment.Address</td>
+                <td>@shipment.Weight</td>
+                <td>
+                    <a href="/Shipment/Details/@shipment.Id">Details</a> |
+                    <a href="/Shipment/Edit/@shipment.Id">Edit</a> |
+                    <a href="/Shipment/Delete/@shipment.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/Shipment/Create">Add New Shipment</a>
